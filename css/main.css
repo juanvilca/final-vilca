@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+}
+.grid{
+    display: grid;
+    grid-template-areas:"header header"
+                        "nav nav"
+                        "main main"
+                        "footer footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 9% 60% 20%;
+    height: 100vh;
+}
+.contenedorLogo{
+    grid-area: header;
+    padding: 8px;
+}
+.logo{
+    text-align: center;
+    color: black;
+}
+.sub{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+}
+/*navbar*/
+nav{
+    grid-area: nav;
+}
+.navBar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f6f3eb;
+    height: 100%;
+}
+nav ul{
+    list-style: none;
+    background-color: rgb(129, 128, 103);
+}
+nav ul li a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+a:hover{
+    border-bottom: 2px solid #c2a661;;
+}
+
+/*subMenu*/
+.subMenu{
+    position: absolute;
+    background-color: #f6f3eb;
+    display: none;
+    width: 9%;
+}
+.subMenu li a{
+    display: block;
+    padding: 10px;
+    color: rgb(54, 54, 54);
+    font-size: 12px;
+    text-decoration: none;
+}
+.navBar li:hover .subMenu{
+    display: block;
+    padding: 5px;
+}
+
+/*main*/
+main{
+    grid-area: main;
+    width: 85%;
+    justify-self: center;
+}
+
+.mainWrap{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 25% 70%;
+
+}
+.tituloMain1{
+    align-self: center;
+}
+.tituloMain2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.subrayado{
+    width: 60px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #c2a661;
+}
+.descripcionWrap{
+    margin-top: 1%;
+}
+.mainImage{
+    margin-left: 12%;
+    width: 590px;
+    height: 330px;
+}
+.descripcionWrap{
+    align-self: flex-end;
+}
+.descripcionTexto{
+    text-align: center;
+    padding-bottom: 5px;
+    font-style: italic;
+    font-size: 13px;
+}
+
+/*footer*/
+.footerHome{
+    display: flex;
+    justify-content: center;
+    grid-area: footer;
+}
+.redesIconos{
+    display: flex;
+    padding: 25px;
+    margin-top: 8px;
+    justify-content: center;
+    justify-content: space-around;
+}
+.redesIconos a{
+    background: #181815;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 28px;
+    color: white;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 58px;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+.redesIconos a:hover{
+    transform: scale(1.2);
+}
+.copyright{
+    text-align: center;
+    margin: 5px;
+}
+
+
+/*productos*/
+.gridProductos{
+    display: grid;
+    grid-template-areas:"header header"
+                        "nav nav"
+                        "main main" 
+                        "footer footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 9% 105% 5%;
+    height: 100vh;
+}
+
+/*mainProductos*/
+.mainProductos{
+    display: grid;
+    grid-area: main;
+}
+.tituloColeccion{
+    text-align: center;
+    font-family: roboto;
+}
+.productosGrid{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+}
+.productosGrid .caja img{
+    width: 600px;
+    height: 430px;
+}
+
+/*footerProductos*/
+.footerProductos{
+    grid-area: footer;
+    margin-top: 50%;
+}
+.redesIconosProductos{
+    display: flex;
+    padding: 25px;
+    margin-top: 5px;
+    justify-content: center;
+    justify-content: space-around;
+}
+.redesIconosProductos a{
+    background: #181815;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 28px;
+    color: white;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 58px;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+@media screen and (min-width: 760px) and (max-width: 425px){
+    body{
+        background-color: red;
+    }
+
+}
+@media screen and (min-width: 500px){
+
+}
