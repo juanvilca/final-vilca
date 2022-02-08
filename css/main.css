@@ -213,12 +213,158 @@ main{
     transition: 0.5s all;
 }
 
-@media screen and (min-width: 760px) and (max-width: 425px){
-    body{
-        background-color: red;
+@media screen and (max-width: 768px){
+    .grid{
+        display: grid;
+        grid-template-areas:"header header"
+                            "nav nav"
+                            "main main"
+                            "footer footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 12% 9% 68% 20%;
+        height: 100vh;
     }
+    .contenedorLogo{
+        grid-area: header;
+        padding: 8px;
+    }
+    .logo{
+        text-align: center;
+        color: black;
+    }
+    .sub{
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        font-style: italic;
+        text-align: center;
+    }
+    .navBar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #f6f3eb;
+        height: 100%;
+    }
+    .mainImage{
+        margin-left: 12%;
+        width: 480px;
+        height: 300px;
+    }
+    .descripcionTexto{
+        text-align: center;
+        padding-bottom: 5px;
+        font-style: italic;
+        font-size: 13px;
+    }
+    
 
 }
-@media screen and (min-width: 500px){
+@media screen and (max-width: 500px){
+    body{
+        background-color: rgb(112, 41, 112);
+    }
+    .grid{
+        display: grid;
+        grid-template-areas:"header"
+                            "nav"
+                            "main"
+                            "foooter"
+                            ;
+        grid-template-columns: 100%;
+        grid-template-rows: 23% 60% 50% 40%;
+        height: 100vh;
+    }
+    .contenedorLogo{
+        grid-area: header;
+        padding: 8px;
+        width: 130vh;
+    }
+    .logo{
+        text-align: center;
+        color: black;
+        font-size: 48px;
+    }
+    .sub{
+        font-family: 'Roboto', sans-serif;
+        font-size: 25px;
+        font-style: italic;
+        text-align: center;
+    }
+    .navBar{
+        display: grid;
+        align-items: center;
+        background-color: #f6f3eb;
+        height: 100%;
+        width: 132vh;
+    }
+    .mainImage{
+        margin-left: 12%;
+        width: 580px;
+        height: 360px;
+        
+    }
+    .mainWrap{
+        display: grid;
+        height: 100%;
+        grid-template-columns: 25% 70%;
+    
+    }
+    .tituloMain1{
+        align-self: center;
+    }
+    .tituloMain2{
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .subrayado{
+        width: 60px;
+        height: 2px;
+        margin: 0 auto;
+        background-color: #c2a661;
+    }
+    .descripcionWrap{
+        margin-top: 1%;
+    }
+    .mainImage{
+        margin-left: 12%;
+        width: 590px;
+        height: 330px;
+    }
+    .descripcionWrap{
+        width: 90vh;
+    }
+    .descripcionTexto{
+        text-align: center;
+        padding: 5%;
+        padding-bottom: 5px;
+        font-style: italic;
+        font-size: 13px;
+    }
 
+    .footerHome{
+        grid-area: footer;
+        position: relative;
+
+    }
+    .redesIconosProductos{
+        display: flex;
+        padding: 25px;
+        margin-top: 5px;
+        justify-content: center;
+        justify-content: space-around;
+    }
+    .redesIconosProductos a{
+        background: #181815;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 28px;
+        color: white;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 58px;
+        cursor: pointer;
+        transition: 0.5s all;
+    }     
 }
