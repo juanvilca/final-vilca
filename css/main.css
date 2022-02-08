@@ -164,7 +164,7 @@ main{
                         "main main" 
                         "footer footer";
     grid-template-columns: 100%;
-    grid-template-rows: 10% 9% 105% 5%;
+    grid-template-rows: 10% 9% 101% 10%;
     height: 100vh;
 }
 
@@ -172,10 +172,12 @@ main{
 .mainProductos{
     display: grid;
     grid-area: main;
+    margin: 20px;
 }
 .tituloColeccion{
     text-align: center;
     font-family: roboto;
+    padding-bottom: 15px;
 }
 .productosGrid{
     display: grid;
@@ -214,63 +216,83 @@ main{
 }
 
 
+
+/*media queries*/
 @media screen and (min-width: 320px) and (max-width: 768px){
-    body{
-        background-color: rgb(112, 41, 112);
-    }
     .grid{
         display: grid;
         grid-template-areas:"header"
                             "nav"
                             "main"
-                            "foooter"
-                            ;
+                            "footer";
         grid-template-columns: 100%;
-        grid-template-rows: 23% 60% 50% 40%;
+        grid-template-rows: 9% 38% 75% 41%;
         height: 100vh;
     }
     .contenedorLogo{
         grid-area: header;
         padding: 8px;
-        width: 142vh;
+        width: 100%;
     }
     .logo{
         text-align: center;
         color: black;
-        font-size: 48px;
+        font-size: 25px;
     }
     .sub{
         font-family: 'Roboto', sans-serif;
-        font-size: 25px;
+        font-size: 15px;
         font-style: italic;
         text-align: center;
     }
+    
     .navBar{
         display: grid;
         align-items: center;
         background-color: #f6f3eb;
-        height: 100%;
-        width: 145vh;
+        margin-top: 10px;
+        width: 100%;
     }
-    .mainImage{
-        margin-left: 12%;
-        width: 580px;
-        height: 250px;
-        
+
+    main{
+        grid-area: main;
+        width: 100%;
+        justify-content:center ;
+        margin-top: 25px;
+    }
+    /*subMenu*/
+    .subMenu{
+        position: absolute;
+        background-color: #ece9e1;
+        display: none;
+        width: 13%;
+    }
+    .subMenu li a{
+        display: grid;
+        grid-template-rows: auto auto;
+        padding: 12px;
+        color: rgb(54, 54, 54);
+        font-size: 12px;
+        text-decoration: none;
+    }
+    .navBar li:hover .subMenu{
+        display: block;
+        padding: 33px;
     }
     .mainWrap{
         display: grid;
-        height: 100%;
-        grid-template-columns: 25% 70%;
-    
+        height: 0;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
     }
     .tituloMain1{
         align-self: center;
+        padding: 6px;
     }
     .tituloMain2{
         text-align: center;
         font-size: 30px;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
     }
     .subrayado{
         width: 60px;
@@ -278,27 +300,91 @@ main{
         margin: 0 auto;
         background-color: #c2a661;
     }
-    .descripcionWrap{
-        margin-top: 1%;
-    }
+
     .mainImage{
-        margin-left: 13%;
-        width: 590px;
-        height: 330px;
+        margin: 15px;
+        margin-left: 0%;
+        width: 390px;
+        height: 300px;
     }
     .descripcionWrap{
-        width: 90vh;
+        margin-top: 0%;
+        align-self: flex-end;
     }
     .descripcionTexto{
         text-align: center;
-        padding: 5%;
-        padding-bottom: 5px;
+        padding-bottom: 0px;
         font-style: italic;
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .footerHome{
+        display: grid;  
+        grid-template-columns: auto;
+        padding-top: 25%;
+        width: 100%;
         grid-area: footer;
+    }
+    .redesIconosProductos{
+        padding: 0px;
+        justify-content: center;
+    }
+    .redesIconosProductos a{
+        background: #181815;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 28px;
+        color: white;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 58px;
+        cursor: pointer;
+        transition: 0.5s all;
+    }     
+    .copyright{
+        text-align: center;
+        margin: 1px;
+        font-size: 8px;
+    }
+    /*productos*/
+    .gridProductos{
+        display: grid;
+        grid-template-areas:"header"
+                            "nav"
+                            "main"
+                            "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 8% 35% 273% 63%;
+        height: 100vh;
+    }
+
+    /*mainProductos*/
+    .mainProductos{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-area: main;
+        padding-top: 25px;
+    }
+    .tituloColeccion{
+        text-align: center;
+        font-family: roboto;
+    }
+    .productosGrid{
+        display: grid;
+        grid-template-columns: auto;
+        padding-top: 20px;
+        justify-content: space-around;
+    }
+    .productosGrid .caja img{
+        width: 400px;
+        height: 300px;
+    }
+
+    /*footerProductos*/
+    .footerProductos{
+        grid-area: footer;
+        margin-top: 70%;
     }
     .redesIconosProductos{
         display: flex;
@@ -319,5 +405,166 @@ main{
         line-height: 58px;
         cursor: pointer;
         transition: 0.5s all;
+    }
+    .copyright{
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .gridProductos{
+        display: grid;
+        grid-template-areas:"header"
+                            "nav"
+                            "main"
+                            "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 8% 35% 260% 76%;
+        height: 100vh;
+    }
+    .mainImage{
+        margin: 15px;
+        margin-left: 0%;
+        width: 425px;
+        height: 310px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    
+    .grid{
+        display: grid;
+        grid-template-areas:"header"
+                            "nav"
+                            "main"
+                            "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 11% 20% 70% 50%;
+        height: 100vh;
+    }
+
+    
+    /*subMenu*/
+    .subMenu{
+        position: absolute;
+        background-color: #ece9e1;
+        display: none;
+        width: 6%;
+    }
+    .subMenu li a{
+        padding: 5px;
+        font-size: 12px;
+    }
+    .navBar li:hover .subMenu{
+        display: block;
+        padding: 33px;
+    }
+    /*main*/
+    main{
+        grid-area: main;
+        width: 100%;
+        justify-content:center ;
+        margin-top: 25px;
+    }
+    .mainWrap{
+        display: grid;
+        height: 0;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+    }
+    .tituloMain1{
+        align-self: center;
+    }
+    .tituloMain2{
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+    .subrayado{
+        width: 60px;
+        height: 2px;
+        margin: 0 auto;
+        background-color: #c2a661;
+    }
+
+    .mainImage{
+        margin: 15px;
+        margin-left: 0%;
+        width: 768px;
+        height: 460px;
+    }
+    .descripcionTexto{
+        text-align: center;
+        padding-bottom: 0px;
+        font-style: italic;
+        font-size: 15px;
+    }
+
+    .footerHome{
+        display: grid;  
+        grid-template-columns: auto;
+        padding-top: 25%;
+        width: 100%;
+        grid-area: footer;
+    }
+    .redesIconosProductos{
+        padding: 0px;
+        justify-content: center;
+    }
+    .redesIconosProductos a{
+        background: #181815;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 28px;
+        color: white;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 58px;
+        cursor: pointer;
+        transition: 0.5s all;
     }     
+    .copyright{
+        text-align: center;
+        margin: 1px;
+        font-size: 8px;
+    }  
+    /*productos*/
+    .gridProductos{
+        display: grid;
+        grid-template-areas:"header"
+                            "nav"
+                            "main"
+                            "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 13% 16% 445% 70%;
+        height: 100vh;
+    }
+    
+    /*mainProductos*/
+    .mainProductos{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-area: main;
+        padding-top: 25px;
+    }
+    .tituloColeccion{
+        text-align: center;
+        font-family: roboto;
+    }
+    .productosGrid{
+        display: grid;
+        grid-template-columns: auto;
+        padding-top: 20px;
+        justify-content: space-around;
+    }
+    .productosGrid .caja img{
+        width: 750px;
+        height: 500px;
+    } 
+    .copyright{
+        text-align: center;
+        margin: 20px;
+        font-size: 8px;
+    } 
 }
